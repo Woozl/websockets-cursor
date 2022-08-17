@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "server",
   "version": "1.0.0",
   "description": "",
@@ -26,31 +25,5 @@
   "dependencies": {
     "uuid": "^8.3.2",
     "ws": "^8.8.1"
-=======
-  "name": "web",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "prettier": "prettier --write ."
-  },
-  "dependencies": {
-    "next": "12.2.5",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "@types/node": "18.7.5",
-    "@types/react": "18.0.17",
-    "@types/react-dom": "18.0.6",
-    "@types/websocket": "^1.0.5",
-    "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5",
-    "prettier": "^2.7.1",
-    "typescript": "4.7.4"
->>>>>>> frontend/main
   }
 }
