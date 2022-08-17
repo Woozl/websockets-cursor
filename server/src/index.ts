@@ -33,7 +33,7 @@ wss.on("connection", (ws) => {
     const outbound = JSON.stringify(message);
 
     [...clients.keys()].forEach((client) => {
-      client.send(outbound);
+      if (clients.get(client)!.id !== message.sender) client.send(outbound);
     });
   });
 
