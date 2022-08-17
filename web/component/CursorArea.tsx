@@ -8,10 +8,6 @@ const CursorArea = () => {
 
   useEffect(() => {
     if (ws) {
-      ws.onopen = (event) => {
-        ws.send(JSON.stringify({ id: "hello", color: "red" }));
-      };
-
       ws.onmessage = (event) => {
         const message = JSON.parse(event.data);
         updateOrCreateCursorFor(message);
@@ -19,7 +15,7 @@ const CursorArea = () => {
     }
   }, []);
 
-  // if a cursor with the user id exists, updates it's information
+  // if a cursor with the user id exists, updates its information
   // if no cursor exists, create a new one with the information
   const updateOrCreateCursorFor = (message: {
     x: number;
@@ -50,8 +46,10 @@ const CursorArea = () => {
     <div onMouseMove={handleMouseMove} className="container">
       <>{[...cursorMap.values()]}</>
 
-      <p>MouseX: {mousePos.x}</p>
-      <p>MouseY: {mousePos.y}</p>
+      <div className="mousePos">
+        <p>x: {mousePos.x}</p>
+        <p>y: {mousePos.y}</p>
+      </div>
     </div>
   );
 };
